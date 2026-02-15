@@ -20,7 +20,7 @@ export default function Home() {
   
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // NOW 5 MEMORY PAGES - added 2 more!
+  // Memory pages
   const memories = [
     {
       image: "Joyrono.jpeg",
@@ -34,7 +34,7 @@ export default function Home() {
       image: "Joyrono3.jpeg",
       text: "Care to explain this picture LMAOOOOOOOOO!!!!",
     },
-  {
+    {
       image: "Joyrono4.jpeg",
       text: "December 25, 2021 : We had the first ever video call after a LONG time. I saw the same smile that illuminated my world back in 2018-19. 'Do not take a screenshot' you said, but I still did. Womp Womp! "
     },
@@ -42,10 +42,9 @@ export default function Home() {
       image: "Joyrono5.jpeg",
       text: "Goofy human....! I love how you are unapologetically yourself. ",
     },
-    
   ];
 
-  // YOUR STICKER PHOTOS - perfectly positioned around the edges of the screen
+  // Sticker photos
   const stickerPhotos = [
     { 
       id: 1, 
@@ -224,7 +223,7 @@ export default function Home() {
       {/* Purple Hearts on EVERY page */}
       <PurpleHearts />
       
-      {/* Music Control */}
+      {/* Music Control - FIXED: removed duplicate transition */}
       <motion.button
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -232,7 +231,6 @@ export default function Home() {
         onClick={toggleMusic}
         className="fixed top-5 right-5 z-50 w-12 h-12 bg-white rounded-full shadow-lg border-2 border-[#e6ddff] flex items-center justify-center hover:scale-110 transition-all"
         whileHover={{ rotate: 360 }}
-        transition={{ duration: 0.5 }}
       >
         <span className="text-2xl">
           {isMusicPlaying ? '🔊' : '🔈'}
@@ -370,7 +368,7 @@ export default function Home() {
         </div>
       )}
 
-      {/* MEMORY PAGES - FIXED IMAGE DIMENSIONS */}
+      {/* MEMORY PAGES */}
       {screen === "memory" && (
         <div className="relative w-[1000px] h-[600px]">
           <AnimatePresence mode="wait">
@@ -382,7 +380,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className={`${paper} absolute w-full h-full flex overflow-hidden border-4 border-[#e6ddff]`}
             >
-              {/* Left page - Image - FIXED: removed fixed height, using object-contain */}
+              {/* Left page - Image */}
               <div className="w-1/2 p-8 bg-gradient-to-br from-white to-[#faf5ff] flex items-center justify-center">
                 <div className="relative">
                   <div className="absolute -top-2 -left-2 w-4 h-4 bg-[#c4b8ff] rounded-full flex items-center justify-center">
@@ -484,8 +482,7 @@ export default function Home() {
                     <span>💜</span> Dear Joy, <span>💜</span>
                   </h2>
                   <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                  
-Life has a funny way of bringing people back into our paths. I’m glad ours crossed again. You’ve always been special in a quiet, genuine way, and I value you more than you know.
+                    Life has a funny way of bringing people back into our paths. I'm glad ours crossed again. You've always been special in a quiet, genuine way, and I value you more than you know.
                   </p>
                   <p className="mt-3 text-[#7c6cff] text-right text-sm italic flex items-center justify-end gap-1">
                     With Love, Wilson <span>💜</span>
@@ -566,7 +563,7 @@ Life has a funny way of bringing people back into our paths. I’m glad ours cro
         </div>
       )}
 
-      {/* PROPOSAL PAGE */}
+      {/* PROPOSAL PAGE - FIXED: removed duplicate music button */}
       {screen === "proposal" && (
         <div className="text-center relative">
           <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-40 h-40 opacity-20">
@@ -620,13 +617,13 @@ Life has a funny way of bringing people back into our paths. I’m glad ours cro
                 className="text-7xl text-[#7c6cff] flex items-center justify-center gap-2"
                 style={{ fontFamily: "'Dancing Script', 'Brush Script MT', cursive" }}
               >
-                <span>💜</span> Type!! <span>💜</span>
+                <span>💜</span> Type! <span>💜</span>
               </h2>
               <h2 
                 className="text-8xl text-[#7c6cff] mt-4 flex items-center justify-center gap-2"
                 style={{ fontFamily: "'Dancing Script', 'Brush Script MT', cursive" }}
               >
-                <span>💜</span>  <span>💜</span>
+                <span>💜</span> 💜 <span>💜</span>
               </h2>
               <div className="mt-8 text-6xl flex justify-center gap-2">
                 <span>💜</span> 💜 <span>💜</span>

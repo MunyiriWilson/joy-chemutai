@@ -632,7 +632,7 @@ Life has a funny way of bringing people back into our paths. I’m glad ours cro
                 <span>💜</span> 💜 <span>💜</span>
               </div>
               <p className="mt-8 text-[#9b8cff] text-2xl flex items-center justify-center gap-2">
-                <span>💜</span> It's a DATE!!!! <span>💜</span>
+                <span>💜</span> It is a DATE!!!! <span>💜</span>
               </p>
             </motion.div>
           )}
